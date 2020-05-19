@@ -13,9 +13,11 @@
 		9C3CAB2724745130001A62C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C3CAB2524745130001A62C7 /* Main.storyboard */; };
 		9C3CAB2924745132001A62C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C3CAB2824745132001A62C7 /* Assets.xcassets */; };
 		9C3CAB2C24745132001A62C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C3CAB2A24745132001A62C7 /* LaunchScreen.storyboard */; };
+		FE7644D6FC3A490BFB0F777D /* Pods_FavoritePlacesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD70C57173AEFE54509D37C /* Pods_FavoritePlacesApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		64F26CCFCEA697F7CED4D8E5 /* Pods-FavoritePlacesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FavoritePlacesApp.debug.xcconfig"; path = "Target Support Files/Pods-FavoritePlacesApp/Pods-FavoritePlacesApp.debug.xcconfig"; sourceTree = "<group>"; };
 		9C3CAB1C24745130001A62C7 /* FavoritePlacesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavoritePlacesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C3CAB1F24745130001A62C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C3CAB2124745130001A62C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		9C3CAB2824745132001A62C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C3CAB2B24745132001A62C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C3CAB2D24745132001A62C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8CD956629619E784DB80097 /* Pods-FavoritePlacesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FavoritePlacesApp.release.xcconfig"; path = "Target Support Files/Pods-FavoritePlacesApp/Pods-FavoritePlacesApp.release.xcconfig"; sourceTree = "<group>"; };
+		EBD70C57173AEFE54509D37C /* Pods_FavoritePlacesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FavoritePlacesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE7644D6FC3A490BFB0F777D /* Pods_FavoritePlacesApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		87707B2C6F57037586105345 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EBD70C57173AEFE54509D37C /* Pods_FavoritePlacesApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9C3CAB1324745130001A62C7 = {
 			isa = PBXGroup;
 			children = (
 				9C3CAB1E24745130001A62C7 /* FavoritePlacesApp */,
 				9C3CAB1D24745130001A62C7 /* Products */,
+				E6C0FFA68EF99758B862C2E3 /* Pods */,
+				87707B2C6F57037586105345 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = FavoritePlacesApp;
 			sourceTree = "<group>";
 		};
+		E6C0FFA68EF99758B862C2E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				64F26CCFCEA697F7CED4D8E5 /* Pods-FavoritePlacesApp.debug.xcconfig */,
+				B8CD956629619E784DB80097 /* Pods-FavoritePlacesApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C3CAB3024745132001A62C7 /* Build configuration list for PBXNativeTarget "FavoritePlacesApp" */;
 			buildPhases = (
+				B882DB05991AB212288517AA /* [CP] Check Pods Manifest.lock */,
 				9C3CAB1824745130001A62C7 /* Sources */,
 				9C3CAB1924745130001A62C7 /* Frameworks */,
 				9C3CAB1A24745130001A62C7 /* Resources */,
+				DD1E50B02F0A72A29CFACFA3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B882DB05991AB212288517AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FavoritePlacesApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD1E50B02F0A72A29CFACFA3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FavoritePlacesApp/Pods-FavoritePlacesApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FavoritePlacesApp/Pods-FavoritePlacesApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FavoritePlacesApp/Pods-FavoritePlacesApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9C3CAB1824745130001A62C7 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		9C3CAB3124745132001A62C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64F26CCFCEA697F7CED4D8E5 /* Pods-FavoritePlacesApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		9C3CAB3224745132001A62C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8CD956629619E784DB80097 /* Pods-FavoritePlacesApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
