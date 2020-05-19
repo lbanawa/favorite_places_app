@@ -149,6 +149,7 @@
                     <connections>
                         <outlet property="tableView" destination="InD-SG-gxL" id="Scv-5M-bWG"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toSignInVC" modalPresentationStyle="fullScreen" id="w8D-Sl-iv0"/>
+                        <segue destination="ZCL-Oh-EhB" kind="show" id="sgH-2U-4yE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ie6-a7-DCM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -161,6 +162,7 @@
                 <navigationController storyboardIdentifier="navigationController" automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" hidesBarsOnTap="YES" id="kvv-7y-Ihz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="22v-Hs-2X7"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="7rH-Gk-pFh">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -182,5 +184,107 @@
             </objects>
             <point key="canvasLocation" x="923" y="138"/>
         </scene>
+        <!--Add LocationVC-->
+        <scene sceneID="cl0-LP-ia1">
+            <objects>
+                <viewController id="ZCL-Oh-EhB" customClass="AddLocationVC" customModule="FavoritePlacesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Mz-rH-7ku">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="LOCATION NAME" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="WKu-YH-39A">
+                                <rect key="frame" x="50" y="122" width="315" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="LOCATION TYPE" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dfe-yx-Ajy">
+                                <rect key="frame" x="50" y="176" width="315" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="LOCATION NOTES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rc7-L6-7xi">
+                                <rect key="frame" x="50" y="233" width="315" height="112"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="112" id="hPR-n7-egN"/>
+                                </constraints>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upload" translatesAutoresizingMaskIntoConstraints="NO" id="k7N-eq-KIO">
+                                <rect key="frame" x="50" y="368" width="315" height="239"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="315" id="CTb-sF-BSh"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="315" id="PYK-vA-03Y"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="239" id="UAJ-JQ-LaT"/>
+                                    <constraint firstAttribute="height" constant="239" id="b2V-FZ-TaC"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPg-xE-Z8i">
+                                <rect key="frame" x="50" y="644" width="315" height="43"/>
+                                <color key="backgroundColor" red="0.75047569439999995" green="0.52719980519999998" blue="0.45917303799999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="V6b-7Z-0fZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
+                                <state key="normal" title="NEXT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextButtonClicked:" destination="ZCL-Oh-EhB" eventType="touchUpInside" id="QaW-TL-TAh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1853266767" green="0.25338588639999998" blue="0.26384041879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="7aa-LK-A2Z" firstAttribute="bottom" secondItem="DPg-xE-Z8i" secondAttribute="bottom" constant="87" id="14M-Gu-gdg"/>
+                            <constraint firstItem="rc7-L6-7xi" firstAttribute="top" secondItem="dfe-yx-Ajy" secondAttribute="bottom" constant="23" id="7Mg-JB-DYo"/>
+                            <constraint firstItem="dfe-yx-Ajy" firstAttribute="trailing" secondItem="rc7-L6-7xi" secondAttribute="trailing" id="9So-GW-yZL"/>
+                            <constraint firstItem="WKu-YH-39A" firstAttribute="centerX" secondItem="7Mz-rH-7ku" secondAttribute="centerX" id="Fpf-F0-luB"/>
+                            <constraint firstItem="dfe-yx-Ajy" firstAttribute="leading" secondItem="rc7-L6-7xi" secondAttribute="leading" id="QHA-E7-ATK"/>
+                            <constraint firstItem="DPg-xE-Z8i" firstAttribute="top" secondItem="k7N-eq-KIO" secondAttribute="bottom" constant="37" id="V0M-Wi-6cg"/>
+                            <constraint firstItem="dfe-yx-Ajy" firstAttribute="top" secondItem="WKu-YH-39A" secondAttribute="bottom" constant="20" id="ZE3-ff-kd2"/>
+                            <constraint firstItem="k7N-eq-KIO" firstAttribute="trailing" secondItem="DPg-xE-Z8i" secondAttribute="trailing" id="arB-8G-kjd"/>
+                            <constraint firstItem="k7N-eq-KIO" firstAttribute="top" secondItem="rc7-L6-7xi" secondAttribute="bottom" constant="23" id="dlv-iZ-Me7"/>
+                            <constraint firstItem="rc7-L6-7xi" firstAttribute="leading" secondItem="k7N-eq-KIO" secondAttribute="leading" id="ger-Bo-ElT"/>
+                            <constraint firstItem="rc7-L6-7xi" firstAttribute="trailing" secondItem="k7N-eq-KIO" secondAttribute="trailing" id="ggX-Co-gKb"/>
+                            <constraint firstItem="WKu-YH-39A" firstAttribute="top" secondItem="7aa-LK-A2Z" secondAttribute="top" constant="122" id="gvI-iz-Cab"/>
+                            <constraint firstItem="k7N-eq-KIO" firstAttribute="leading" secondItem="DPg-xE-Z8i" secondAttribute="leading" id="kz6-hh-3gA"/>
+                            <constraint firstItem="WKu-YH-39A" firstAttribute="leading" secondItem="7aa-LK-A2Z" secondAttribute="leading" constant="50" id="sP4-pQ-Zoz"/>
+                            <constraint firstItem="WKu-YH-39A" firstAttribute="leading" secondItem="dfe-yx-Ajy" secondAttribute="leading" id="xHh-Xm-Ks9"/>
+                            <constraint firstItem="WKu-YH-39A" firstAttribute="trailing" secondItem="dfe-yx-Ajy" secondAttribute="trailing" id="yRp-cZ-X1o"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7aa-LK-A2Z"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7RQ-x9-Ssi"/>
+                    <connections>
+                        <outlet property="locationDescriptionText" destination="rc7-L6-7xi" id="R23-CL-2d7"/>
+                        <outlet property="locationImageView" destination="k7N-eq-KIO" id="Ao8-pQ-Ov2"/>
+                        <outlet property="locationNameText" destination="WKu-YH-39A" id="bvl-7A-FbL"/>
+                        <outlet property="locationTypeText" destination="dfe-yx-Ajy" id="0mS-hO-OPv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OuI-yD-OhI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2537.68115942029" y="137.94642857142856"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="upload" width="300" height="300"/>
+    </resources>
 </document>
