@@ -21,7 +21,7 @@ class AddLocationVC: UIViewController {
     }
     
     @IBAction func nextButtonClicked(_ sender: Any) {
-        
+        self.performSegue(withIdentifier: "toMapVC", sender: nil)
     }
     
 }

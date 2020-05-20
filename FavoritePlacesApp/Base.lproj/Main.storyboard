@@ -149,7 +149,7 @@
                     <connections>
                         <outlet property="tableView" destination="InD-SG-gxL" id="Scv-5M-bWG"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toSignInVC" modalPresentationStyle="fullScreen" id="w8D-Sl-iv0"/>
-                        <segue destination="ZCL-Oh-EhB" kind="show" id="sgH-2U-4yE"/>
+                        <segue destination="ZCL-Oh-EhB" kind="show" identifier="toAddLocationVC" id="sgH-2U-4yE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ie6-a7-DCM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -159,7 +159,7 @@
         <!--Navigation Controller-->
         <scene sceneID="MjO-9G-tGu">
             <objects>
-                <navigationController storyboardIdentifier="navigationController" automaticallyAdjustsScrollViewInsets="NO" hidesBarsOnSwipe="YES" hidesBarsOnTap="YES" id="kvv-7y-Ihz" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navigationController" automaticallyAdjustsScrollViewInsets="NO" id="kvv-7y-Ihz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="22v-Hs-2X7"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -217,7 +217,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="20"/>
+                                        <integer key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
@@ -277,11 +277,70 @@
                         <outlet property="locationImageView" destination="k7N-eq-KIO" id="Ao8-pQ-Ov2"/>
                         <outlet property="locationNameText" destination="WKu-YH-39A" id="bvl-7A-FbL"/>
                         <outlet property="locationTypeText" destination="dfe-yx-Ajy" id="0mS-hO-OPv"/>
+                        <segue destination="RWy-jg-wLz" kind="presentation" identifier="toMapVC" modalPresentationStyle="fullScreen" id="uU3-8l-UlQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OuI-yD-OhI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2537.68115942029" y="137.94642857142856"/>
+        </scene>
+        <!--MapVC-->
+        <scene sceneID="PPT-zK-noD">
+            <objects>
+                <viewController id="PnL-ln-c2u" customClass="MapVC" customModule="FavoritePlacesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6xS-h8-f40">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oBA-iN-SH0">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1853266767" green="0.25338588639999998" blue="0.26384041879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="WaB-TG-yCF" firstAttribute="trailing" secondItem="oBA-iN-SH0" secondAttribute="trailing" id="fN4-PJ-Ivj"/>
+                            <constraint firstItem="oBA-iN-SH0" firstAttribute="top" secondItem="WaB-TG-yCF" secondAttribute="top" id="n3P-sK-MSp"/>
+                            <constraint firstItem="WaB-TG-yCF" firstAttribute="bottom" secondItem="oBA-iN-SH0" secondAttribute="bottom" id="wUF-Az-cNb"/>
+                            <constraint firstItem="oBA-iN-SH0" firstAttribute="leading" secondItem="WaB-TG-yCF" secondAttribute="leading" id="xHb-Vw-RON"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WaB-TG-yCF"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zG5-Io-NqF"/>
+                    <connections>
+                        <outlet property="mapView" destination="oBA-iN-SH0" id="gEE-Zb-VR4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3hS-Ql-hyB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4273.913043478261" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3kK-pE-MQX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RWy-jg-wLz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Rlk-PF-7xL"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xtD-d0-pYf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.1853266767" green="0.25338588639999998" blue="0.26384041879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.1853266767" green="0.25338588639999998" blue="0.26384041879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PnL-ln-c2u" kind="relationship" relationship="rootViewController" id="Tk8-zQ-h0m"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WZa-Ft-r0d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3363.7681159420295" y="137.94642857142856"/>
         </scene>
     </scenes>
     <resources>
