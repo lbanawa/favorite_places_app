@@ -8,7 +8,8 @@
 
 import UIKit
 
-class AddLocationVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+class AddLocationVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
     @IBOutlet weak var locationNameText: UITextField!
     @IBOutlet weak var locationTypeText: UITextField!
     @IBOutlet weak var locationDescriptionText: UITextView!
@@ -20,12 +21,43 @@ class AddLocationVC: UIViewController, UIImagePickerControllerDelegate, UINaviga
         locationImageView.isUserInteractionEnabled = true
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(chooseImage))
         locationImageView.addGestureRecognizer(gestureRecognizer)
+        
+        locationDescriptionText.text = "LOCATION"
+        locationDescriptionText.textColor = UIColor.lightGray
 
         
     }
     
     @IBAction func nextButtonClicked(_ sender: Any) {
-        self.performSegue(withIdentifier: "toMapVC", sender: nil)
+        if locationNameText.text != "" && locationTypeText.text != "" && locationDescriptionText.textColor == UIColor.lightGray {
+            if let chosenImage = locationImageView.image {
+                let locationModel = LocationModel.sharedInstance
+                locationModel.locationName = locationNameText.text!
+                locationModel.locationType = locationTypeText.text!
+                locationModel.locationImage = chosenImage
+                
+                locationDescriptionText.text = nil
+                locationDescriptionText.textColor = UIColor.darkGray
+                
+                
+            }
+            
+            if locationDescriptionText.text.isEmpty {
+                locationDescriptionText.text = "LOCATION NOTES"
+                locationDescriptionText.textColor = UIColor.lightGray
+            }
+            
+            
+            self.performSegue(withIdentifier: "toMapVC", sender: nil)
+            
+        } else {
+            let alert = UIAlertController(title: "Error", message: "Missing text entry!", preferredStyle: UIAlertController.Style.alert)
+            let okButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil)
+            alert.addAction(okButton)
+            present(alert, animated: true, completion: nil)
+        }
+        
+        
     }
     
     @objc func chooseImage() {
