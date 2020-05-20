@@ -22,7 +22,7 @@ class AddLocationVC: UIViewController, UIImagePickerControllerDelegate, UINaviga
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(chooseImage))
         locationImageView.addGestureRecognizer(gestureRecognizer)
         
-        locationDescriptionText.text = "LOCATION"
+        locationDescriptionText.text = "LOCATION NOTES"
         locationDescriptionText.textColor = UIColor.lightGray
 
         

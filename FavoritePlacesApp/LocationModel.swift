@@ -19,6 +19,8 @@ class LocationModel {
     var locationType = ""
     var locationDescription = ""
     var locationImage = UIImage()
+    var locationLatitude = ""
+    var locationLongitude = ""
     
     private init(){}
     
