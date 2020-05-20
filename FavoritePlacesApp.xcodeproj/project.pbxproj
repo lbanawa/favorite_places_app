@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		9C3CAB2024745130001A62C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3CAB1F24745130001A62C7 /* AppDelegate.swift */; };
 		9C3CAB2224745130001A62C7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3CAB2124745130001A62C7 /* SceneDelegate.swift */; };
-		9C3CAB2424745130001A62C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3CAB2324745130001A62C7 /* ViewController.swift */; };
+		9C3CAB2424745130001A62C7 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3CAB2324745130001A62C7 /* SignInVC.swift */; };
 		9C3CAB2724745130001A62C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C3CAB2524745130001A62C7 /* Main.storyboard */; };
 		9C3CAB2924745132001A62C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C3CAB2824745132001A62C7 /* Assets.xcassets */; };
 		9C3CAB2C24745132001A62C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C3CAB2A24745132001A62C7 /* LaunchScreen.storyboard */; };
 		9C3CAB3424748677001A62C7 /* PlacesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3CAB3324748677001A62C7 /* PlacesVC.swift */; };
+		9C3CAB362474A388001A62C7 /* AddLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3CAB352474A388001A62C7 /* AddLocationVC.swift */; };
+		9C3CAB382474A5D2001A62C7 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3CAB372474A5D2001A62C7 /* MapVC.swift */; };
+		9C3CAB3A2474B3EB001A62C7 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3CAB392474B3EB001A62C7 /* DetailsVC.swift */; };
 		FE7644D6FC3A490BFB0F777D /* Pods_FavoritePlacesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD70C57173AEFE54509D37C /* Pods_FavoritePlacesApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,12 +25,15 @@
 		9C3CAB1C24745130001A62C7 /* FavoritePlacesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavoritePlacesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C3CAB1F24745130001A62C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C3CAB2124745130001A62C7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9C3CAB2324745130001A62C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9C3CAB2324745130001A62C7 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		9C3CAB2624745130001A62C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C3CAB2824745132001A62C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C3CAB2B24745132001A62C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C3CAB2D24745132001A62C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C3CAB3324748677001A62C7 /* PlacesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesVC.swift; sourceTree = "<group>"; };
+		9C3CAB352474A388001A62C7 /* AddLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationVC.swift; sourceTree = "<group>"; };
+		9C3CAB372474A5D2001A62C7 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		9C3CAB392474B3EB001A62C7 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		B8CD956629619E784DB80097 /* Pods-FavoritePlacesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FavoritePlacesApp.release.xcconfig"; path = "Target Support Files/Pods-FavoritePlacesApp/Pods-FavoritePlacesApp.release.xcconfig"; sourceTree = "<group>"; };
 		EBD70C57173AEFE54509D37C /* Pods_FavoritePlacesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FavoritePlacesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -75,8 +81,11 @@
 			children = (
 				9C3CAB1F24745130001A62C7 /* AppDelegate.swift */,
 				9C3CAB2124745130001A62C7 /* SceneDelegate.swift */,
-				9C3CAB2324745130001A62C7 /* ViewController.swift */,
+				9C3CAB2324745130001A62C7 /* SignInVC.swift */,
 				9C3CAB3324748677001A62C7 /* PlacesVC.swift */,
+				9C3CAB352474A388001A62C7 /* AddLocationVC.swift */,
+				9C3CAB372474A5D2001A62C7 /* MapVC.swift */,
+				9C3CAB392474B3EB001A62C7 /* DetailsVC.swift */,
 				9C3CAB2524745130001A62C7 /* Main.storyboard */,
 				9C3CAB2824745132001A62C7 /* Assets.xcassets */,
 				9C3CAB2A24745132001A62C7 /* LaunchScreen.storyboard */,
@@ -209,9 +218,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C3CAB2424745130001A62C7 /* ViewController.swift in Sources */,
+				9C3CAB2424745130001A62C7 /* SignInVC.swift in Sources */,
+				9C3CAB382474A5D2001A62C7 /* MapVC.swift in Sources */,
 				9C3CAB2024745130001A62C7 /* AppDelegate.swift in Sources */,
 				9C3CAB3424748677001A62C7 /* PlacesVC.swift in Sources */,
+				9C3CAB3A2474B3EB001A62C7 /* DetailsVC.swift in Sources */,
+				9C3CAB362474A388001A62C7 /* AddLocationVC.swift in Sources */,
 				9C3CAB2224745130001A62C7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
