@@ -150,11 +150,67 @@
                         <outlet property="tableView" destination="InD-SG-gxL" id="Scv-5M-bWG"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toSignInVC" modalPresentationStyle="fullScreen" id="w8D-Sl-iv0"/>
                         <segue destination="ZCL-Oh-EhB" kind="show" identifier="toAddLocationVC" id="sgH-2U-4yE"/>
+                        <segue destination="hUT-tz-Fug" kind="show" identifier="toDetailsVC" id="7cZ-W5-Osp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ie6-a7-DCM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1728" y="138"/>
+        </scene>
+        <!--DetailsVC-->
+        <scene sceneID="9Yh-wo-kI5">
+            <objects>
+                <viewController id="hUT-tz-Fug" customClass="DetailsVC" customModule="FavoritePlacesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r2P-KC-SW4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uSS-03-4Ip">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="217"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="locationNameLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="81C-hZ-HqT">
+                                <rect key="frame" x="36" y="237" width="343" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="locationTypeLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXK-Qz-ThU">
+                                <rect key="frame" x="36" y="288" width="343" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="locationDescription" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="azo-4Y-Kay">
+                                <rect key="frame" x="36" y="339" width="343" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1853266767" green="0.25338588639999998" blue="0.26384041879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Q8H-yG-mHm">
+                                <rect key="frame" x="0.0" y="447" width="414" height="361"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1853266767" green="0.25338588639999998" blue="0.26384041879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="tML-fW-cgz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rfh-ud-A0u"/>
+                    <connections>
+                        <outlet property="detailsDescriptionTextView" destination="azo-4Y-Kay" id="WGK-Ra-zRZ"/>
+                        <outlet property="detailsImageView" destination="uSS-03-4Ip" id="LYZ-PB-q2a"/>
+                        <outlet property="detailsMapView" destination="Q8H-yG-mHm" id="W9N-rI-ovX"/>
+                        <outlet property="detailsNameLabel" destination="81C-hZ-HqT" id="9Pd-A2-6MT"/>
+                        <outlet property="detailsTypeLabel" destination="yXK-Qz-ThU" id="Vt2-rE-PsR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YzA-ea-M6t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1705.7971014492755" y="870.53571428571422"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MjO-9G-tGu">
