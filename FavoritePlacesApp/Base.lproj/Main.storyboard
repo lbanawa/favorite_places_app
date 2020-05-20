@@ -130,7 +130,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="InD-SG-gxL">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" red="0.1853266767" green="0.25338588639999998" blue="0.26384041879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" red="0.1853266767" green="0.25338588639999998" blue="0.26384041879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" red="0.1853266767" green="0.25338588639999998" blue="0.26384041879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -269,7 +269,7 @@
         <scene sceneID="cl0-LP-ia1">
             <objects>
                 <viewController id="ZCL-Oh-EhB" customClass="AddLocationVC" customModule="FavoritePlacesApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7Mz-rH-7ku">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="7Mz-rH-7ku">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -427,6 +427,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="sgH-2U-4yE"/>
         <segue reference="oQ6-l9-oY3"/>
     </inferredMetricsTieBreakers>
     <resources>
