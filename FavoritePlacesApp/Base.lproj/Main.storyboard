@@ -124,13 +124,13 @@
             <objects>
                 <viewController id="Zge-7N-gf6" customClass="PlacesVC" customModule="FavoritePlacesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jiz-Y8-lol">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="InD-SG-gxL">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" red="0.1853266767" green="0.25338588639999998" blue="0.26384041879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" red="0.1853266767" green="0.25338588639999998" blue="0.26384041879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" red="0.1853266767" green="0.25338588639999998" blue="0.26384041879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -162,10 +162,10 @@
             <objects>
                 <viewController id="hUT-tz-Fug" customClass="DetailsVC" customModule="FavoritePlacesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r2P-KC-SW4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uSS-03-4Ip">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uSS-03-4Ip">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="217"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="217" id="xA2-b3-ihl"/>
@@ -200,7 +200,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Q8H-yG-mHm">
-                                <rect key="frame" x="0.0" y="447" width="414" height="361"/>
+                                <rect key="frame" x="0.0" y="447" width="414" height="395"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" red="0.1853266767" green="0.25338588639999998" blue="0.26384041879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -269,8 +269,8 @@
         <scene sceneID="cl0-LP-ia1">
             <objects>
                 <viewController id="ZCL-Oh-EhB" customClass="AddLocationVC" customModule="FavoritePlacesApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7Mz-rH-7ku">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="7Mz-rH-7ku">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="LOCATION NAME" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="WKu-YH-39A">
@@ -281,14 +281,14 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="LOCATION TYPE" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dfe-yx-Ajy">
-                                <rect key="frame" x="50" y="176" width="315" height="34"/>
+                                <rect key="frame" x="50" y="210" width="315" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="LOCATION NOTES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rc7-L6-7xi">
-                                <rect key="frame" x="50" y="233" width="315" height="112"/>
+                                <rect key="frame" x="50" y="267" width="315" height="112"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="112" id="hPR-n7-egN"/>
@@ -303,7 +303,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upload" translatesAutoresizingMaskIntoConstraints="NO" id="k7N-eq-KIO">
-                                <rect key="frame" x="50" y="368" width="315" height="239"/>
+                                <rect key="frame" x="50" y="402" width="315" height="239"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="315" id="CTb-sF-BSh"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="239" id="HBE-kO-4LA"/>
@@ -314,7 +314,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPg-xE-Z8i">
-                                <rect key="frame" x="50" y="644" width="315" height="43"/>
+                                <rect key="frame" x="50" y="678" width="315" height="43"/>
                                 <color key="backgroundColor" red="0.75047569439999995" green="0.52719980519999998" blue="0.45917303799999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="V6b-7Z-0fZ"/>
@@ -390,6 +390,7 @@
                     <navigationItem key="navigationItem" id="zG5-Io-NqF"/>
                     <connections>
                         <outlet property="mapView" destination="oBA-iN-SH0" id="gEE-Zb-VR4"/>
+                        <segue destination="Zge-7N-gf6" kind="presentation" identifier="fromMapVCtoPlacesVC" modalPresentationStyle="fullScreen" id="oQ6-l9-oY3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3hS-Ql-hyB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -425,6 +426,9 @@
             <point key="canvasLocation" x="3363.7681159420295" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="oQ6-l9-oY3"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="upload" width="300" height="300"/>
     </resources>

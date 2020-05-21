@@ -22,7 +22,7 @@ class AddLocationVC: UIViewController, UIImagePickerControllerDelegate, UINaviga
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(chooseImage))
         locationImageView.addGestureRecognizer(gestureRecognizer)
         
-        locationDescriptionText.text = "LOCATION"
+        locationDescriptionText.text = "LOCATION NOTES"
         locationDescriptionText.textColor = UIColor.lightGray
 
         
@@ -34,17 +34,13 @@ class AddLocationVC: UIViewController, UIImagePickerControllerDelegate, UINaviga
                 let locationModel = LocationModel.sharedInstance
                 locationModel.locationName = locationNameText.text!
                 locationModel.locationType = locationTypeText.text!
+                locationModel.locationDescription = locationDescriptionText.text!
                 locationModel.locationImage = chosenImage
                 
                 locationDescriptionText.text = nil
                 locationDescriptionText.textColor = UIColor.darkGray
                 
                 
-            }
-            
-            if locationDescriptionText.text.isEmpty {
-                locationDescriptionText.text = "LOCATION NOTES"
-                locationDescriptionText.textColor = UIColor.lightGray
             }
             
             
@@ -72,5 +68,15 @@ class AddLocationVC: UIViewController, UIImagePickerControllerDelegate, UINaviga
         locationImageView.image =  info[.originalImage] as? UIImage
         self.dismiss(animated: true, completion: nil)
     }
+    
+    private func textViewDidEndEditing(textView: UITextView) {
+        let locationModel = LocationModel.sharedInstance
+        locationModel.locationDescription = locationDescriptionText.text!
+        if locationDescriptionText.text == nil {
+            locationDescriptionText.text = "LOCATION NOTES"
+            locationDescriptionText.textColor = UIColor.lightGray
+        }
+    }
+    
     
 }
