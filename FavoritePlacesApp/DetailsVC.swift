@@ -18,9 +18,16 @@ class DetailsVC: UIViewController {
     @IBOutlet weak var detailsDescriptionTextView: UITextView!
     
     var chosenLocationId = ""
+    var chosenLatitude = Double()
+    var chosenLongitude = Double()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getDataFromParse()
+    }
+    
+    func getDataFromParse() {
         
         let query = PFQuery(className: "Places")
         // filter the results
@@ -29,12 +36,49 @@ class DetailsVC: UIViewController {
             if error != nil {
                 
             } else {
-                print(objects)
+                if objects != nil {
+                    if objects!.count > 0 {
+                        let chosenLocationObject = objects![0]
+                        
+                        if let locationName = chosenLocationObject.object(forKey: "name") as? String {
+                            self.detailsNameLabel.text = locationName
+                        }
+                        
+                        if let locationType = chosenLocationObject.object(forKey: "type") as? String {
+                            self.detailsTypeLabel.text = locationType
+                        }
+                        
+                        if let locationDescription = chosenLocationObject.object(forKey: "description") as? String {
+                            self.detailsDescriptionTextView.text = locationDescription
+                        }
+                        
+                        if let locationLatitude = chosenLocationObject.object(forKey: "latitude") as? String {
+                            if let locationLatitudeDouble = Double(locationLatitude) {
+                                self.chosenLatitude = locationLatitudeDouble
+                            }
+                        }
+                        
+                        if let locationLongitude = chosenLocationObject.object(forKey: "longitude") as? String {
+                            if let locationLongitudeDouble = Double(locationLongitude) {
+                                self.chosenLongitude = locationLongitudeDouble
+                            }
+                        }
+                        
+                        if let imageData = chosenLocationObject.object(forKey: "image") as? PFFileObject {
+                            imageData.getDataInBackground { (data, error) in
+                                if error == nil {
+                                    if data != nil {
+                                        self.detailsImageView.image = UIImage(data: data!)
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
-
         
     }
     
-
+    
 }
